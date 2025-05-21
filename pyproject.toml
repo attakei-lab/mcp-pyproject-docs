@@ -3,6 +3,7 @@ name = "mcp-pyproject-docs"
 version = "0.0.0"
 description = "MCP server for search document of Python projects."
 readme = "README.md"
+license = "Apache-2.0"
 authors = [
     { name = "Kazuya Takei", email = "myself@attakei.net" }
 ]
