@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  setup-dev:
+    desc: 'Setup workspace for development'
+    cmds:
+      - 'uv sync --frozen --all-extras'
+      - 'lefthook install'
+  verify:
+    desc: 'Verify environment by all procs'
+    cmds:
+      - task: 'setup-dev'
+      - 'lefthook run pre-commit --all-files'
+      - 'uv build'
+  release-*:
+    desc: 'Run release process'
+    vars:
+      LEVEL: '{{index .MATCH 0}}'
+    cmds:
+      - 'age {{.LEVEL}}'
+      - 'uv sync --all-extras'  # To write out as lock-file
