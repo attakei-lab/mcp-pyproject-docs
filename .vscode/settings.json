@@ -1,3 +1,20 @@
 {
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "mcp": {
+        "inputs": [],
+        "servers": {
+            "mcp-pyproject-docs": {
+                "command": "${workspaceFolder}/.venv/bin/python",
+                "args": [
+                    "-m",
+                    "mcp_pyproject_docs",
+                    "--workspace",
+                    "${workspaceFolder}"
+                ],
+                "env": {
+                    "CWD": "${workspaceFolder}"
+                }
+            }
+        }
+    }
 }
