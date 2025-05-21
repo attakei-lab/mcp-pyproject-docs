@@ -1,2 +1,3 @@
-def hello() -> str:
-    return "Hello from mcp-pyproject-docs!"
+from fastmcp import FastMCP
+
+mcp = FastMCP(__name__)
