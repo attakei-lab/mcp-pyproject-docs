@@ -16,6 +16,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
+demo = [
+    "sphinx-revealjs>=3.2.0",
+]
 dev = [
     "ruff>=0.11.10",
     "ty>=0.0.1a6",
