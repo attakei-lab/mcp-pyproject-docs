@@ -51,7 +51,7 @@ def get_supported_project() -> list[str]:
     return projects
 
 
-@mcp.tool("Search documents")
+@mcp.tool()
 def search_document(project_name: str, word: str) -> list[SearchResult]:
     """Search pages of document from specified project.
 
